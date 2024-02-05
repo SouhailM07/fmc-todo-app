@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Josefin_Sans } from "next/font/google";
+// Josefin Sans
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const usedFont = Josefin_Sans({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={usedFont.className}>{children}</body>
     </html>
   );
 }
