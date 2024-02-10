@@ -7,7 +7,6 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 // assets
 import Image from "next/image";
-import deleteIcon from "../../../public/icon-cross.svg";
 
 export default function NotesContainer() {
   let [notes, setNotes]: any = useState([]);
@@ -56,7 +55,7 @@ let Note = ({ note, done }) => {
         <Image
           width={14}
           height={14}
-          src={deleteIcon}
+          src="icon-cross.svg"
           role="button"
           alt="logo"
           aria-label="delete button"
