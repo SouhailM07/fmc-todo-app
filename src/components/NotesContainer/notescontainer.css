@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.note:hover .deleteBtn {
+  @apply block;
+}
