@@ -27,9 +27,9 @@ export default function NotesContainer() {
   }, []);
   return (
     <>
-      <article className="w-full bg-very-light-gray rounded-md">
+      <article className="w-full bg-very-light-gray rounded-sm">
         <section>
-          <ScrollArea className="h-[10rem]">
+          <ScrollArea className="h-[10rem] rounded-sm">
             <ul className="min-h-[8rem] ">
               {isLoading ? (
                 <>
@@ -68,7 +68,7 @@ export default function NotesContainer() {
 let Note = ({ note, done, noteId, f }) => {
   return (
     <>
-      <li className="note px-[1rem] flex py-[0.6rem] border-y-very-light-grayish-blue border text-very-dark-grayish-blue bg-transparent items-center justify-between">
+      <li className="note px-[1rem] flex py-[0.6rem] text-[0.8rem] border-y-very-light-grayish-blue border text-very-dark-grayish-blue bg-transparent items-center justify-between">
         <div
           onClick={async () => {
             await axios.put(`/api/notes?id=${noteId}`);

@@ -3,7 +3,7 @@
 @tailwind utilities;
 /* custom */
 body {
-  @apply bg-very-light-grayish-blue;
+  @apply bg-very-light-grayish-blue bg-[url("/bg-desktop-light.jpg")]  bg-[center_0rem] bg-[length:100%_auto] bg-no-repeat;
 }
 @layer base {
   :root {
