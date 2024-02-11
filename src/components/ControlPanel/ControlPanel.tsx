@@ -1,8 +1,13 @@
+"use client";
 import "./controlpanel.css";
 import Image from "next/image";
+//
+import { useContext } from "react";
+import { ModeContext } from "@/app/contextApi/ModeContextProvider";
 // components
 import { MyInput } from "@/components";
 export default function ControlPanel() {
+  let { darkMode, setDarkMode }: any = useContext(ModeContext);
   return (
     <>
       <article className=" space-y-[1rem]">
@@ -11,7 +16,8 @@ export default function ControlPanel() {
           <Image
             role="button"
             alt="logo"
-            src="/icon-moon.svg"
+            onClick={() => setDarkMode(!darkMode)}
+            src={darkMode ? "/icon-sun.svg" : "/icon-moon.svg"}
             width={26}
             height={26}
           />

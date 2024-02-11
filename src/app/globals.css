@@ -2,8 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 /* custom */
+/* "very-dark-blue": "#050c18",
+"very-dark-desaturated-blue": "#091f2b",
+"dark-theme-light-grayish-blue": "#c3d4e3",
+"dark-theme-light-grayish-blue-hover": "#d9e3ef",
+"dark-theme-dark-grayish-blue": "#596c7d",
+"dark-theme-very-dark-grayish-blue": "#283d50",
+"dark-theme-very-dark-grayish-blue-hover": "#222d38", */
 body {
-  @apply bg-very-light-grayish-blue bg-[url("/bg-desktop-light.jpg")]  bg-[center_0rem] bg-[length:100%_auto] bg-no-repeat;
+  @apply bg-very-light-grayish-blue dark:bg-very-dark-blue bg-[url("/bg-desktop-light.jpg")] dark:bg-[url("/bg-desktop-dark.jpg")]  bg-[center_0rem] bg-[length:100%_auto] bg-no-repeat;
 }
 @layer base {
   :root {

@@ -7,8 +7,8 @@ export default function MyInput() {
   let [createdNote, setCreatedNote] = useState<string>("");
   return (
     <>
-      <div className="flex rounded-sm items-center text-[0.9rem] bg-very-light-gray text-very-dark-grayish-blue px-[1rem]">
-        <div className="border border-dark-grayish-blue h-[1rem] w-[1rem] rounded-full"></div>
+      <div className="dark:bg-very-dark-desaturated-blue flex rounded-sm items-center text-[0.9rem] bg-very-light-gray text-very-dark-grayish-blue px-[1rem]">
+        <div className="border dark:border-dark-theme-dark-grayish-blue border-dark-grayish-blue h-[1rem] w-[1rem] rounded-full"></div>
         <form
           className=" w-full "
           onSubmit={async (e) => {

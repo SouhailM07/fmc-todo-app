@@ -1,7 +1,5 @@
 "use client";
 import "./notescontainer.css";
-// api functions
-import { noteState } from "@/lib/apiFunctions";
 // shadcn-ui
 import { Skeleton } from "../ui/skeleton";
 import { ScrollArea } from "../ui/scroll-area";
@@ -27,7 +25,7 @@ export default function NotesContainer() {
   }, []);
   return (
     <>
-      <article className="w-full bg-very-light-gray rounded-sm">
+      <article className="w-full dark:bg-very-dark-desaturated-blue bg-very-light-gray rounded-sm ">
         <section>
           <ScrollArea className="h-[10rem] rounded-sm">
             <ul className="min-h-[8rem] ">
@@ -68,7 +66,7 @@ export default function NotesContainer() {
 let Note = ({ note, done, noteId, f }) => {
   return (
     <>
-      <li className="note px-[1rem] flex py-[0.6rem] text-[0.8rem] border-y-very-light-grayish-blue border text-very-dark-grayish-blue bg-transparent items-center justify-between">
+      <li className="note dark:text-dark-theme-light-grayish-blue border-y px-[1rem] dark:border-dark-theme-dark-grayish-blue flex py-[0.6rem] text-[0.8rem] border-y-very-light-grayish-blue text-very-dark-grayish-blue bg-transparent items-center justify-between">
         <div
           onClick={async () => {
             await axios.put(`/api/notes?id=${noteId}`);
@@ -81,7 +79,7 @@ let Note = ({ note, done, noteId, f }) => {
             className={`${
               done &&
               "bg-gradient-to-r from-check-background-start to-check-background-end"
-            } border border-dark-grayish-blue h-[1rem] bg-no-repeat bg-center grid place-items-center w-[1rem] rounded-full`}
+            } border dark:border-dark-theme-dark-grayish-blue border-dark-grayish-blue  h-[1rem] bg-no-repeat bg-center grid place-items-center w-[1rem] rounded-full`}
           >
             <Image
               src="icon-check.svg"
@@ -91,7 +89,7 @@ let Note = ({ note, done, noteId, f }) => {
               className={done ? "block" : "hidden"}
             />
           </div>
-          <p className="indent-[1rem]">{note}</p>
+          <p className={`${done && "line-through"} indent-[1rem]`}>{note}</p>
         </div>
         <Image
           onClick={async () => {
